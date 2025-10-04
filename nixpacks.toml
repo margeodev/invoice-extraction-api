@@ -1,4 +1,0 @@
-# nixpacks.toml
-[phases.setup]
-# Instala o Tesseract OCR e os dados da língua portuguesa
-aptPkgs = ["tesseract-ocr", "tesseract-ocr-por"]
