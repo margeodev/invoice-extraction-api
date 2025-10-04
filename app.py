@@ -1,3 +1,5 @@
+# app.py (versão final para o Railway com Dockerfile)
+
 from flask import Flask, request, jsonify
 import pytesseract
 from PIL import Image
@@ -146,12 +148,5 @@ def index():
         }
     }), 200
 
-if __name__ == '__main__':
-    print("=" * 60)
-    print("API de Extração de Dados de Comprovante de Transferência")
-    print("=" * 60)
-    print("Iniciando servidor na porta 5001...")
-    print("Acesse: http://localhost:5001")
-    print("Health Check: http://localhost:5001/health")
-    print("=" * 60)
-    app.run(host='0.0.0.0', port=5001, debug=False, threaded=True)
+# O bloco if __name__ == '__main__': foi removido.
+# O servidor Gunicorn, configurado no Dockerfile, cuidará de iniciar a aplicação.
